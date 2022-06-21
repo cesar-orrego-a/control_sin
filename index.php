@@ -62,12 +62,12 @@ error_reporting(E_ERROR | E_PARSE);
    <div class="card-body">
      <h5 class="card-title">Catálogo de productos</h5>
      <p class="card-text">Lista de productos disponibles para la venta.
-       <div class="container">
+      <div class="container">
         <div class="row">
           <?php foreach ($products as $key => $value) { ?>
             <div class="col">
              <div class="card">
-               <img src="<?php echo './images/'.$value["img"] ?>" class="card-img-top">
+               <img src="<?php echo './products_images/'.$value["img"] ?>" class="card-img-top" width="100px">
                <div class="card-body">
                  <h5 class="card-title"><?php echo $value["name"].' (S/ '.$value["price"].') '?></h5>
                  <p class="card-text"><?php echo $value["description"] ?></p>

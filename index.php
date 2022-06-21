@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ERROR | E_PARSE);
   include "data.php";
   include "templates.php";
   echo $header_html;
@@ -20,20 +21,31 @@ session_start();
         </thead>
         <tbody>
        <?php
-       foreach ($_SESSION["cart"] as $key => $value) { ?>
+       $total = 0;
+       foreach ($_SESSION["cart"] as $key => $value) {
+          $subtotal = $products[$key]["price"]*$value["qty"];
+          $total += $subtotal;
+         ?>
 
          <tr>
            <td><?php echo $products[$key]["id"] ?></td>
            <td><?php echo $products[$key]["name"] ?></td>
            <td><?php echo $value["qty"] ?></td>
            <td><?php echo $products[$key]["price"] ?></td>
-           <td><?php echo $products[$key]["price"]*$value["qty"] ?></td>
+           <td><?php echo $subtotal ?></td>
            <td>
              <a href="remove_from_cart.php?id=<?php echo $key ?>">Disminuir</a>&nbsp;&nbsp;
-             <a href="remove_from_cart.php?remove_all=1&id=<?php echo $key ?>">Eliminar</a>
+             <a href="remove_from_cart.php?removeAll=1&id=<?php echo $key ?>">Eliminar</a>
            </td>
          </tr>
       <?php }} ?>
+      <tfoot>
+        <tr>
+          <td colspan="5" align="left" style="text-align:right;">
+            TOTAL : <?php echo $total ?>
+          </td>
+        </tr>
+      </tfoot>
       </tbody>
       </table>
     </div>

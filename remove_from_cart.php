@@ -7,7 +7,7 @@ if(isset($_SESSION["cart"][$_GET["id"]])){
   }else{
     $_SESSION["cart"][$_GET["id"]]["qty"]--;
   }
-  if($_SESSION["cart"][$_GET["id"]]["qty"] <1){
+  if($_SESSION["cart"][$_GET["id"]]["qty"] >1){
     unset($_SESSION["cart"][$_GET["id"]]);
   }
 }

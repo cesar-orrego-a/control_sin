@@ -11,4 +11,3 @@ $header_html = '<html>
 
 $footer_html ='</body>
   </html>';
-?>

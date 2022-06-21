@@ -39,7 +39,7 @@ error_reporting(E_ERROR | E_PARSE);
                <td style="text-align: right;"><?php echo $subtotal ?></td>
                <td>
                  <a href="remove_from_cart.php?id=<?php echo $key ?>" title="Disminuir"><i class="fa fa-minus" aria-hidden="true"></i></a>&nbsp;&nbsp;
-                 <a href="remove_from_cart.php?removeAll=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                 <a href="remove_from_cart.php?remove_all=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
                </td>
              </tr>
           <?php }} ?>

@@ -38,8 +38,8 @@ error_reporting(E_ERROR | E_PARSE);
                <td style="text-align: right;"><?php echo $products[$key]["price"] ?></td>
                <td style="text-align: right;"><?php echo $subtotal ?></td>
                <td>
-                 <a href="remove_from_cart.php?id=<?php echo $key ?>" title="Disminuir"><i class="fa fa-minus" aria-hidden="true"></i></a>&nbsp;&nbsp;
-                 <a href="remove_from_cart.php?removeAll=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                 <a href="remove_from_cart.php?id=<?php  $key ?>" title="Disminuir"><i class="fa fa-minus" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                 <a href="remove_from_cart.php?remove_all=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
                </td>
              </tr>
           <?php }} ?>
@@ -71,6 +71,7 @@ error_reporting(E_ERROR | E_PARSE);
                <div class="card-body">
                  <h5 class="card-title"><?php echo $value["name"].' (S/ '.$value["price"].') '?></h5>
                  <p class="card-text"><?php echo $value["description"] ?></p>
+                 
                  <a href="./add_to_cart.php?id=<?php echo $key ?>" class="btn btn-primary">Añadir</a>
                </div>
               </div>

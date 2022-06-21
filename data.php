@@ -12,7 +12,7 @@ $products = array(
         "name" => "Destornillador estrella 7mm",
         "description" => "Destornillador estrella 7mm, mango de goma, punta imantada.",
         "price" => "14.5",
-        "img" => "DestornilladorEstrella.jpg"
+        "img" => "DestornilladorEstrella.jpg",
         "id" => "2",
     ),
     "DATS" => array(
@@ -26,7 +26,7 @@ $products = array(
         "name" => "Martillo mango de madera, 10 inch",
         "description" => "Martillo mango de madera de 10 pulgadas",
         "price" => "40.5",
-        "img" => "products_images/MartilloMadera.jpg"
+        "img" => "products_images/MartilloMadera.jpg",
         "id" => "4",
     ),
     "KEYS" => array(

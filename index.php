@@ -3,7 +3,7 @@ session_start();
 error_reporting(E_ERROR | E_PARSE);
   include "data.php";
   include "templates.php";
-  #echo $header_html;
+  echo $header_html;
   #sólo se muestra el carrito si hay productos
   if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
  ?>
@@ -25,6 +25,7 @@ error_reporting(E_ERROR | E_PARSE);
             <tbody>
            <?php
            $total = 0;
+
            foreach ($_SESSION["cart"] as $key => $value) {
              # se calcula el subtotal y se va aumentando el total en el bucle
               $subtotal = $products[$key]["price"]*$value["qty"];
@@ -58,12 +59,12 @@ error_reporting(E_ERROR | E_PARSE);
   </div>
 
 
- <div class="card">
-   <div class="card-body">
-     <h5 class="card-title">Catálogo de productos</h5>
-     <p class="card-text">Lista de productos disponibles para la venta.
        <div class="container">
         <div class="row">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Catálogo de productos</h5>
+              <p class="card-text">Lista de productos disponibles para la venta.
           <?php foreach ($products as $key => $value) { ?>
             <div class="col">
              <div class="card">

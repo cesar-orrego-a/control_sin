@@ -32,7 +32,7 @@ error_reporting(E_ERROR | E_PARSE);
              ?>
 
              <tr>
-               <td><?php echo $products[$key]["id"] ?></td>
+               <td><?php echo $key ?></td>
                <td><?php echo $products[$key]["name"] ?></td>
                <td style="text-align: right;"><?php echo $value["qty"] ?></td>
                <td style="text-align: right;"><?php echo $products[$key]["price"] ?></td>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(E_ERROR | E_PARSE);
+# Las imágenes no se ven en el local host
   include "data.php";
   include "templates.php";
   #echo $header_html;

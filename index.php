@@ -11,8 +11,8 @@ session_start();
      <p class="card-text">Lista de productos seleccionados.
       <table class="table table-condensed">
         <thead>
-          <th>Producto</th>
           <th>Código</th>
+          <th>Producto</th>
           <th>Cant</th>
           <th>Precio</th>
           <th>Subtotal</th>
@@ -23,8 +23,8 @@ session_start();
        foreach ($_SESSION["cart"] as $key => $value) { ?>
 
          <tr>
+           <td><?php echo $products[$key]["id"] ?></td>
            <td><?php echo $products[$key]["name"] ?></td>
-           <td><?php echo $key ?></td>
            <td><?php echo $value["qty"] ?></td>
            <td><?php echo $products[$key]["price"] ?></td>
            <td><?php echo $products[$key]["price"]*$value["qty"] ?></td>

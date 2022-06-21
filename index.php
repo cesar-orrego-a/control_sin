@@ -3,6 +3,7 @@ session_start();
 error_reporting(E_ERROR | E_PARSE);
   include "data.php";
   include "templates.php";
+  echo $header_html;
   #echo $header_html;
   #sólo se muestra el carrito si hay productos
   if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
@@ -39,7 +40,7 @@ error_reporting(E_ERROR | E_PARSE);
                <td style="text-align: right;"><?php echo $subtotal ?></td>
                <td>
                  <a href="remove_from_cart.php?id=<?php echo $key ?>" title="Disminuir"><i class="fa fa-minus" aria-hidden="true"></i></a>&nbsp;&nbsp;
-                 <a href="remove_from_cart.php?removeAll=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                 <a href="remove_from_cart.php?remove_all=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
                </td>
              </tr>
           <?php }} ?>
@@ -67,7 +68,7 @@ error_reporting(E_ERROR | E_PARSE);
           <?php foreach ($products as $key => $value) { ?>
             <div class="col">
              <div class="card">
-               <img src="<?php echo './images/'.$value["img"] ?>" class="card-img-top">
+               <img src="<?php echo './products_images/'.$value["img"] ?>" class="card-img-top">
                <div class="card-body">
                  <h5 class="card-title"><?php echo $value["name"].' (S/ '.$value["price"].') '?></h5>
                  <p class="card-text"><?php echo $value["description"] ?></p>

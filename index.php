@@ -81,6 +81,5 @@ error_reporting(E_ERROR | E_PARSE);
     </p>
    </div>
  </div>
-<?php
-echo $footer_html
+<?php echo $footer_html;
  ?>

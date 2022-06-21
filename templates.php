@@ -1,4 +1,4 @@
-<?php
+
 <html>
     <head>
         <title>Control SIN - 2022-I</title>

@@ -32,5 +32,3 @@ $products = array(
         "img" => "JuegoLlaves.jpg"
     )
 );
-
- ?>

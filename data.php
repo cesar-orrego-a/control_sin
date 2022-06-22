@@ -9,6 +9,7 @@ $products = array(
     ),
     "DEXT" => array(
         "name" => "Destornillador estrella 7mm",
+        "id" => "Destornillador estrella 7mm",
         "description" => "Destornillador estrella 7mm, mango de goma, punta imantada.",
         "price" => "14.5",
         "img" => "DestornilladorEstrella.jpg"

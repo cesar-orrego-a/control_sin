@@ -1,5 +1,5 @@
-<?php
-$header_html = '<html>
+
+<html>
     <head>
         <title>Control SIN - 2022-I</title>
         <meta charset="utf-8">
@@ -9,6 +9,5 @@ $header_html = '<html>
     </head>
     <body>';
 
-$footer_html ='</body>
-  </html>';
-?>
+</body>
+  </html>;

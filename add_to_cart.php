@@ -7,6 +7,7 @@ if(isset($_SESSION["cart"][$_GET["id"]])){
   $_SESSION["cart"][$_GET["id"]]["qty"] = 1;
 }
 $_SESSION["alert"] = 'Producto añadido al carrito correctamente. ';
+
 header("location: index.php")
 
  ?>

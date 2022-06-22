@@ -1,9 +1,13 @@
 <?php
+include 'templates.php';
+echo $header_html;?>
+<?php
+
 session_start();
 error_reporting(E_ERROR | E_PARSE);
   include "data.php";
   include "templates.php";
-  #echo $header_html;
+  echo $header_html;
   #sólo se muestra el carrito si hay productos
   if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
  ?>
@@ -67,7 +71,7 @@ error_reporting(E_ERROR | E_PARSE);
           <?php foreach ($products as $key => $value) { ?>
             <div class="col">
              <div class="card">
-               <img src="<?php echo './images/'.$value["img"] ?>" class="card-img-top">
+               <img src="<?php echo './products_images/'.$value["img"] ?>" class="card-img-top">
                <div class="card-body">
                  <h5 class="card-title"><?php echo $value["name"].' (S/ '.$value["price"].') '?></h5>
                  <p class="card-text"><?php echo $value["description"] ?></p>

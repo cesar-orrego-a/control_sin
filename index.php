@@ -1,9 +1,9 @@
 <?php
 session_start();
 error_reporting(E_ERROR | E_PARSE);
-  include "data.php";
-  include "templates.php";
-  #echo $header_html;
+  include ("data.php");
+  include ("templates.php");
+  echo $header_html;
   #sólo se muestra el carrito si hay productos
   if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
  ?>

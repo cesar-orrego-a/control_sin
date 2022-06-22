@@ -26,7 +26,7 @@ $products = array(
         "name" => "Martillo mango de madera, 10 inch",
         "description" => "Martillo mango de madera de 10 pulgadas",
         "price" => "40.5",
-        "img" => "products_images/MartilloMadera.jpg",
+        "img" => "MartilloMadera.jpg",
         "id" => "4",
     ),
     "KEYS" => array(

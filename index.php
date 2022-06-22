@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+        <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
 <?php
 session_start();
 error_reporting(E_ERROR | E_PARSE);
@@ -5,8 +17,8 @@ error_reporting(E_ERROR | E_PARSE);
   include "templates.php";
   #echo $header_html;
   #sólo se muestra el carrito si hay productos
-  if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
- ?>
+  if (isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0) {
+      ?>
   <div class="container">
     <div class="row">
       <div class="card">
@@ -25,11 +37,10 @@ error_reporting(E_ERROR | E_PARSE);
             <tbody>
            <?php
            $total = 0;
-           foreach ($_SESSION["cart"] as $key => $value) {
-             # se calcula el subtotal y se va aumentando el total en el bucle
-              $subtotal = $products[$key]["price"]*$value["qty"];
-              $total += $subtotal;
-             ?>
+      foreach ($_SESSION["cart"] as $key => $value) {
+          # se calcula el subtotal y se va aumentando el total en el bucle
+          $subtotal = $products[$key]["price"]*$value["qty"];
+          $total += $subtotal; ?>
 
              <tr>
                <td><?php echo $products[$key]["id"] ?></td>
@@ -42,7 +53,10 @@ error_reporting(E_ERROR | E_PARSE);
                  <a href="remove_from_cart.php?removeAll=1&id=<?php echo $key ?>" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>
                </td>
              </tr>
-          <?php }} ?>
+          <?php
+      }
+  } ?>
+
           <tfoot>
             <tr>
               <td colspan="5" style="text-align:right;">
@@ -84,3 +98,10 @@ error_reporting(E_ERROR | E_PARSE);
 <?php
 echo $footer_html
  ?>
+
+
+</head>
+<body>
+
+</body>
+</html>

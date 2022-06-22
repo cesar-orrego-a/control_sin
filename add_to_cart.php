@@ -9,4 +9,4 @@ if(isset($_SESSION["cart"][$_GET["id"]])){
 $_SESSION["alert"] = 'Producto añadido al carrito correctamente. ';
 header("location: index.php")
 
- ?>
+?>

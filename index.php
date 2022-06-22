@@ -2,6 +2,8 @@
 include 'templates.php';
 echo $header_html;
 ?>
+
+
 <?php
 session_start();
 error_reporting(E_ERROR | E_PARSE);

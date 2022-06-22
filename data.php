@@ -1,5 +1,6 @@
 <?php
-
+include 'header.php';
+echo $header_html;
 $products = array(
     "DEDS" => array(
         "name" => "Destornillador plano 7mm",
